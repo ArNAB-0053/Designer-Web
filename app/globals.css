@@ -264,7 +264,7 @@ body::-webkit-scrollbar-thumb {
 @media only screen and (max-width: 680px) {
   html,
   body {
-    font-size: 46%;
+    font-size: 70%;
   }
 
   #mainContainer {
