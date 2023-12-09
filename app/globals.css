@@ -33,11 +33,13 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   width: 100vw;
+  min-height: 100vh;
   overflow-x: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  padding-top: 2rem;
 }
 
 body::-webkit-scrollbar {
@@ -231,33 +233,25 @@ body::-webkit-scrollbar-thumb {
   }
 }
 
-@media only screen and (max-width: 600px) {
+
+@media only screen and (max-width: 1068px) {
   html,
   body {
-    font-size: 37%;
+    font-size: 60%;
   }
+}
 
-  #mainContainer {
-    display: grid;
-    align-self: center;
-    justify-content: center;
-    grid-template-columns: repeat(2 ,1fr);
-    margin-bottom: 4rem;
+@media only screen and (max-width: 768px) {
+  html,
+  body {
+    font-size: 54%;
   }
+}
 
-  #container {
-    width: 40vw;
-    height: 40vw;
-    aspect-ratio: 1/1;
-    padding: 2rem;
-  }
-
-  #heading {
-    font-size: 1rem;
-  }
-
-  #desc {
-    font-size: 0.5rem;
+@media only screen and (min-width: 768px) and (max-width: 1000px){
+  html,
+  body {
+    font-size: 54%;
   }
 }
 
@@ -269,39 +263,51 @@ body::-webkit-scrollbar-thumb {
 
   #mainContainer {
     display: grid;
-    align-self: center;
-    justify-content: center;
+    align-items: center;
+    justify-items: center;
     grid-template-columns: repeat(2 ,1fr);
+    padding: 0 4vw;
     margin-bottom: 4rem;
+    width: 100vw;
   }
 
   #container {
-    width: 42vw;
-    height: 42vw;
-    aspect-ratio: 1/1;
+    width: 44vw;
+    height: 54vw;
     padding: 2rem;
-    margin: 2rem;
   }
 
   #heading {
-    font-size: 1.7rem;
+    font-size: 1.4rem;
   }
 
   #desc {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 }
 
-@media only screen and (max-width: 768px) {
-  html,
-  body {
-    font-size: 54%;
+@media only screen and (max-width: 200px) {
+  #headerHeading {
+    font-size: 2rem;
   }
 }
 
-@media only screen and (max-width: 1068px) {
+@media only screen and (max-width: 350px) {
   html,
   body {
     font-size: 60%;
+  }
+
+  #mainContainer {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  #container {
+    width: 80vw;
+    height: 80vw;
+    padding: 2rem;
   }
 }

@@ -3,8 +3,8 @@ import React from 'react'
 
 const Header = () => {
     return (
-        <div className='flex items-center justify-center flex-col mt-4'>
-            <h1 id='headerHeading' className=' uppercase z-20 mt-10'>Designer Web</h1>
+        <div id='header' className='flex items-center justify-center flex-col mt-4'>
+            <h1 id='headerHeading' className=' uppercase z-20 mt-10 '>Designer Web</h1>
             <Image
                 src="/cloud.svg"
                 width="1100"
