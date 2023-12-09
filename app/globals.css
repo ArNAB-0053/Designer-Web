@@ -234,7 +234,7 @@ body::-webkit-scrollbar-thumb {
 @media only screen and (max-width: 600px) {
   html,
   body {
-    font-size: 7%;
+    font-size: 37%;
   }
 
   #mainContainer {
@@ -264,7 +264,7 @@ body::-webkit-scrollbar-thumb {
 @media only screen and (max-width: 680px) {
   html,
   body {
-    font-size: 20%;
+    font-size: 46%;
   }
 
   #mainContainer {
