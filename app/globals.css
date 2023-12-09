@@ -281,6 +281,14 @@ body::-webkit-scrollbar-thumb {
     aspect-ratio: 1/1;
     padding: 2rem;
   }
+
+  #heading {
+    font-size: 1.7rem;
+  }
+
+  #desc {
+    font-size: 1.2rem;
+  }
 }
 
 @media only screen and (max-width: 768px) {
