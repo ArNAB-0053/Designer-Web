@@ -1,113 +1,108 @@
-import Image from 'next/image'
+import Body from '@/Components/Body'
+import React from 'react'
 
-export default function Home() {
+const page = () => {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+    <>
+      <div id='mainContainer' className='grid grid-rows-auto grid-cols-4 gap-x-6 gap-y-10 mx-16 my-16'>
+        <Body
+          link="https://getcssscan.com/css-box-shadow-examples"
+          heading="Scancss-box shadow"
+          desc="93 beautiful box-shadow example"
+        />
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
+        <Body
+          link="https://getcssscan.com/css-buttons-examples"
+          heading="Scancss- buttons"
+          desc="93 beautiful button example"
+        />
+
+        <Body
+          link="https://10015.io/tools/css-glassmorphism-generator"
+          heading="Glass-morphism"
+          desc="Glassmorphism Generator is a free tool for generating CSS frosted-glass effect with background blur."
+        />
+
+        <Body
+          link="https://unicornicons.com/"
+          heading="Unicornicons"
+          desc="Unicorn icons are a collection of animated icons."
+        />
+
+        <Body
+          link="https://app.haikei.app/"
+          heading="Haikai App"
+          desc="A web-based design tool to generate unique SVG design assets for websites, social media, blog posts, desktop and mobile wallpapers, posters, and more."
+        />
+
+        <Body
+          link="https://uiverse.io/all"
+          heading="Uiverse"
+          desc="Library of free and customizable UI elements made with CSS or Tailwind. It's all open-source, and it's all free."
+        />
+
+        <Body
+          link="https://9elements.github.io/fancy-border-radius/"
+          heading="Fancy border radius"
+          desc="A visual generator to build organic looking shapes with the help of CSS3 border-radius property."
+        />
+
+        <Body
+          link="https://10015.io/"
+          heading="10015"
+          desc="All in one... loader, glass morphism, fancy border etc."
+        />
+
+        <Body
+          link="https://icons.getbootstrap.com/"
+          heading="Bootstrap"
+          desc="Bootstrap offers free svg icon that can be use in the html only by coping svg code or by use the class."
+        />
+
+        <Body
+          link="https://tailwindcss.com/docs/installation"
+          heading="Tailwind css"
+          desc="Tailwind CSS is a utility-first CSS framework for rapidly building modern websites without ever leaving your HTML."
+        />
+
+        <Body
+          link="https://fonts.google.com/"
+          heading="Google fonts"
+          desc="Without downloading the fonts just by import you can use the fonts."
+        />
+
+        <Body
+          link="https://ideogram.ai/t/trending"
+          heading="ideogram"
+          desc="Image generator but you can use it to make logos for free."
+        />
+
+        <Body
+          link="https://www.remove.bg/"
+          heading="Remove bg"
+          desc="Free to use background remover."
+        />
+
+        <Body
+          link="https://vectorizer.ai/"
+          heading="Vertorizer ai"
+          desc="It helps to convert jpg/png images to a vertor image."
+        />
+
+        <Body
+          link="https://blobmaker.app/"
+          heading="Blobmaker"
+          desc="Blobmaker is a free generative design tool made with by z creative labs, to help you quickly create random, unique, and organic-looking SVG shapes."
+        />
+
+        <Body
+          link="https://deeditor.com/"
+          heading="Deeditor"
+          desc="Change SVG Color Online. DeEditor allows you to make icons from SVG files in a really simple way. Just upload, edit colors and download in PNG, SVG, or PDF file ."
         />
       </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+    </>
   )
 }
+
+export default page

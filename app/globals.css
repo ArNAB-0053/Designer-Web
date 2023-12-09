@@ -2,26 +2,297 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+@font-face {
+  font-family: FuturaNowHeadlineExtraBold;
+  src: url('../public/Fonts/FuturaNowHeadlineExtraBold.ttf');
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+@font-face {
+  font-family: FuturaNowHeadlineExtraBlack;
+  src: url('../public/Fonts/FuturaNowHeadlineExtraBlack.ttf');
+}
+
+@font-face {
+  font-family: HelveticaBold;
+  src: url('../public/Fonts/HelveticaNowText-Bold.ttf');
+}
+
+@font-face {
+  font-family: HelveticaLight;
+  src: url('../public/Fonts/HelveticaNowText-Light.ttf');
+}
+
+html,
+body {
+  font-size: 100%;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-image: url('../public/wave.svg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100vw;
+  overflow-x: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+body::-webkit-scrollbar {
+  background-image: url('../public/wave.svg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  margin: 0.1rem;
+  border-radius: 2rem;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #3306d2;
+  background: -webkit-linear-gradient(360deg, #3306d2 0%, #0083f6 100%);
+  background: linear-gradient(360deg, #3306d2 0%, #0083f6 100%);
+  border-radius: 2rem;
+
+}
+
+
+/* Wave Animation */
+#container {
+  width: 20vw;
+  height: 16vw;
+  background: #20b4f8;
+  background: -webkit-linear-gradient(-90deg, #20b4f8 0%, #296dff 100%);
+  -webkit-box-shadow: -7px 6px 15.5px -5.5px #1561c4;
+  -moz-box-shadow: -7px 6px 15.5px -5.5px #1561c4;
+  box-shadow: -7px 6px 15.5px -5.5px #1561c4;
+  border-radius: 1.2rem;
+  color: #fff;
+  padding: 1.2rem;
+}
+
+.water {
+  width: 20vw;
+  height: 16vw;
+  background: #44cdff;
+  background: -webkit-linear-gradient(173deg, #44cdff 0%, #4596ff 100%);
+  background: linear-gradient(173deg, #44cdff 0%, #4596ff 100%);
+  border-radius: 1.2rem;
+  aspect-ratio: 1/1;
+  position: absolute;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+#container:hover {
+  -webkit-box-shadow: 0 6px 15.5px -5.5px #18a6d9;
+  -moz-box-shadow: 0 6px 15.5px -5.5px #18a6d9;
+  box-shadow: 0 6px 15.5px -5.5px #18a6d9;
+}
+
+.water:hover,
+#heading:hover+.water,
+#desc:hover+.water {
+  opacity: 1;
+}
+
+.water::before,
+.water::after {
+  content: '';
+  position: absolute;
+  width: 180%;
+  height: 180%;
+  top: -50%;
+  left: 50%;
+  background: #fff;
+  animation: wave 5s linear infinite;
+}
+
+.water::before {
+  border-radius: 45%;
+}
+
+.water::after {
+  border-radius: 35%;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+@keyframes wave {
+  0% {
+    transform: translate(-50%, -50%) rotate(0);
+    top: -30%;
+  }
+
+  50% {
+    top: -50%;
+  }
+
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+    top: -30%;
+  }
+}
+
+
+#heading {
+  font-family: FuturaNowHeadlineExtraBold;
+  background: transparent;
+  font-size: 1.7rem;
+  line-height: 1.7rem;
+}
+
+#desc {
+  font-family: HelveticaLight;
+  background: transparent;
+  font-size: 0.8rem;
+}
+
+
+/* Right Arrow */
+#rightArrow {
+  animation: rightAni 2s linear infinite;
+  color: rgb(4, 36, 132);
+}
+
+@keyframes rightAni {
+  0% {
+    transform: translateX(0%);
+  }
+
+  50% {
+    transform: translateX(40%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+#headerHeading {
+  font-family: FuturaNowHeadlineExtraBold;
+  color: #006eff;
+  text-align: center;
+  font-size: 5rem;
+}
+
+/* #cloud {
+  animation: cloudAni 44s linear infinite;
+} */
+
+/* #cloud2 {
+  animation: cloud2Ani 70s linear infinite;
+}
+
+#cloud3 {
+  animation: cloud3Ani 87s linear infinite;
+}
+
+#cloud4 {
+  animation: cloud4Ani 115s linear infinite;
+} */
+
+/* #cloud5 {
+  animation: cloud2Ani 94s linear infinite;
+} */
+
+@keyframes cloud3Ani {
+  0% {
+    left: -50%;
+  }
+
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes cloud4Ani {
+  0% {
+    left: -70%;
+  }
+
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes cloud2Ani {
+  0% {
+    left: -40%;
+  }
+
+  100% {
+    left: 100%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  html,
+  body {
+    font-size: 7%;
+  }
+
+  #mainContainer {
+    display: grid;
+    align-self: center;
+    justify-content: center;
+    grid-template-columns: repeat(2 ,1fr);
+    margin-bottom: 4rem;
+  }
+
+  #container {
+    width: 40vw;
+    height: 40vw;
+    aspect-ratio: 1/1;
+    padding: 2rem;
+  }
+
+  #heading {
+    font-size: 1rem;
+  }
+
+  #desc {
+    font-size: 0.5rem;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  html,
+  body {
+    font-size: 20%;
+  }
+
+  #mainContainer {
+    display: grid;
+    align-self: center;
+    justify-content: center;
+    grid-template-columns: repeat(2 ,1fr);
+    margin-bottom: 4rem;
+  }
+
+  #container {
+    width: 40vw;
+    height: 40vw;
+    aspect-ratio: 1/1;
+    padding: 2rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  html,
+  body {
+    font-size: 54%;
+  }
+}
+
+@media only screen and (max-width: 1068px) {
+  html,
+  body {
+    font-size: 60%;
+  }
 }
