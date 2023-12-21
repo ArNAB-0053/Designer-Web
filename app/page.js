@@ -100,6 +100,12 @@ const page = () => {
           heading="Deeditor"
           desc="Change SVG Color Online. DeEditor allows you to make icons from SVG files in a really simple way. Just upload, edit colors and download in PNG, SVG, or PDF file ."
         />
+
+        <Body
+          link="https://neumorphism.io/#e0e0e0/"
+          heading="Neumorphism"
+          desc="CSS code generator that will help with colors, gradients and shadows to adapt this new design trend or discover its posibilities."
+        />
       </div>
     </>
   )
