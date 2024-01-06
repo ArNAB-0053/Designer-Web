@@ -106,6 +106,18 @@ const page = () => {
           heading="Neumorphism"
           desc="CSS code generator that will help with colors, gradients and shadows to adapt this new design trend or discover its posibilities."
         />
+
+        <Body
+          link="https://autoprefixer.github.io/"
+          heading="autoprefixer"
+          desc="Autoprefixer is a PostCSS plugin which parses your CSS and adds vendor prefixes."
+        />
+
+        <Body
+          link="https://favicon.io/"
+          heading="favicon"
+          desc="The only favicon generator you need for your next project. Quickly generate your favicon from text, image, or choose from hundreds of emojis."
+        />
       </div>
     </>
   )
